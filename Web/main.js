@@ -1,5 +1,15 @@
 $(function () {
 	//
+	// レイアウト制御部
+	//
+	$(window).bind("orientationchange",function(){
+		if(Math.abs(window.orientation) === 90){
+			alert("横画面には対応していません\n縦にして遊んでね！");
+		}
+	})
+	//
+	// ゲーム本体部
+	//
 	var cardsA = [];
 	var cardsB = [];
 	// --
