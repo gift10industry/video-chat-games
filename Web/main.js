@@ -16,6 +16,10 @@ $(function () {
 	});
 	function reset()
 	{
+		// 連続でリセットを押したときに山札が増えてしまう不具合の対処
+		cardsA = [];
+		cardsB = [];
+		// --
 		for(var idx = 0; idx < 12; idx++) cardsA.push(idx);
 		for(var idx = 0; idx < 12; idx++) cardsB.push(idx);
 		cardsA = shuffle(cardsA);
